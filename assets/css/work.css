@@ -10,7 +10,7 @@ body {
   padding: 0;
 }
 
-html {
+*{
   scroll-behavior: smooth;
 }
 
@@ -33,22 +33,7 @@ body a {
   margin-left: 30px;
 }
 
-.logo-line {
-  width: 4px !important;
-  height: 2px !important;
-  border: 0.5px solid #ff0000;
-  background-color: #ff0000;
-  padding-left: 10px !important;
-  margin-left: 30px;
-  cursor: pointer;
-}
 
-.logo-line:hover {
-  color: #000000 !important;
-  background-color: #000000;
-  border: 0.5px solid #000000;
-  transition: 1.5s;
-}
 
 .logo-text {
   margin: 0;
