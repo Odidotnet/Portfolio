@@ -77,6 +77,11 @@ a:hover {
   transition: 1.3s;
 }
 
+.text-logo a{
+  color: #000000 !important;
+  font-weight: 700;
+}
+
 /* doing underline effect by hoverfor the nav-links */
 
 
