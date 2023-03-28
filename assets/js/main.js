@@ -15,7 +15,7 @@ new Swiper('.swiper', {
 
 // code my typedjs
 var typed = new Typed(".auto-type", {
-  strings: ["Experience with ODIDOTNET", "Hire me as Web Developer"],
+  strings: ["Hire me as Web Developer", "Get Better Digital Experience with ODIDOTNET"],
   typeSpeed: 150,
   backSpeed: 150,
   loop: true
