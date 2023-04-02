@@ -18,20 +18,13 @@ body a {
   text-decoration: none;
 }
 
-#land {
-  width: 100%;
-  height: 100vh;
-  background: rgb(0, 0, 0, 0.7) url("../img/land.webp") top center no-repeat !important;
-  background-size: cover !important;
-  padding-top: 82px;
-  background-blend-mode: darken !important;
-  position: relative;
-}
+
 
 .logo {
   width: 60px;
   margin-left: 30px;
 }
+
 
 
 
@@ -120,15 +113,55 @@ a:hover {
 
 /* ==== begining of land section ==== */
 
-/* .image-heading{
-  transition: all 2s !important;
-} */
+#land {
+  width: 100%;
+  height: 100vh;
+  color: #000000;
+  background-color: #fff;
+  /* background: rgb(0, 0, 0, 0.7) url("../img/land.webp") top center no-repeat !important; */
+  /* background-size: cover !important; */
+  padding-top: 82px;
+  /* background-blend-mode: darken !important; */
+  position: relative;
+}
+
+.land-images {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+
+.land-images img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  transition: bottom 1s, left 1s;
+}
+
+.land-images:hover .svg {
+  bottom: 40px;
+}
+
+.land-images:hover .my-image {
+  left:  45%;
+}
+
+.my-image {
+  width: 60%;
+  height: 20%;
+  object-fit: contain;
+  padding: 10px;
+}
 
 .image-heading h1 {
   text-align: left !important;
   margin-top: 160px;
   margin-left: 10px;
-  color: #fff;
+  color: #000000;
   font-weight: 700;
   cursor: pointer;
 }
@@ -137,7 +170,7 @@ a:hover {
   text-align: left !important;
   font-size: 25px;
   margin-left: 10px;
-  color: #fff;
+  color: #000000;
   font-weight: 500;
   cursor: pointer;
 }
@@ -161,9 +194,9 @@ a:hover {
 }
 
 .get-started-btn:hover {
-  color: #fff !important;
-  background-color: transparent !important;
-  border: 2px solid #fff;
+  color: #ff0000 !important;
+  background-color: #fff !important;
+  border: 2px solid #ff0000;
 }
 
 /* ==== end of land section ==== */
@@ -733,10 +766,24 @@ a:hover {
 
 /* ---skills section */
 
-.skills {
+/* .skills {
   width: 100%;
   max-width: 600px;
   padding: 0 20px;
+} */
+
+.skills .skill-bar {
+  width: 80%;
+  height: 13px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.skill-bar .skill-per {
+   width: 50%;
+   height: 100%;
+   background-color: #ff0000;
+   border-radius: 20px;
 }
 
 .skill-type {
@@ -747,16 +794,17 @@ a:hover {
   margin: 20px 0;
 }
 
-.skill-bar {
+/* .skill-bar {
+  width: 100%;
   height: 14px;
-  background-color: #ffffffc6; 
-}
+  background-color: #fff; 
+} */
 
-.skill-per {
+/* .skill-per {
   height: 14px;
   background-color: #ff0000;
   position: relative;
-}
+} */
 
 .skill-per ::before {
   content: attr(per);
@@ -936,15 +984,64 @@ a:hover {
 
 /*  ======== for small potrait devices====== */
 @media  (max-width: 575.98px)  {
+
+  .land-images img {
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+   /* .land-images {
+    max-width: 100%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+  }
+  
+  .land-images img {
+    opacity: 40%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: bottom 1s, left 1s;
+  }
+  
+  .land-images:hover .svg {
+    bottom: 40px;
+  }
+  
+  .land-images:hover .my-image {
+    left:  45%;
+  }
+  
+  .my-image {
+    max-width: 100%;
+    padding: 10px 0 5px 0;
+  }
+
+  .svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  } */
+
+
   .image-heading h1 {
+    position: relative;
     font-size: larger;
     margin-top: 80px;
     margin-left: 10px;
     text-align: center;
     justify-content: center;
-    color: #fff;
+    color: #000000;
     font-weight: 700;
     cursor: pointer;
+    z-index: 99;
   }
 
   .image-heading h2 {
@@ -952,12 +1049,13 @@ a:hover {
     margin-left: 10px;
     text-align: center;
     justify-content: center;
-    color: #fff;
+    color: #000000;
     font-weight: 500;
     cursor: pointer;
   }
 
   .btn-div {
+    z-index: 99;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -987,6 +1085,10 @@ a:hover {
   }
 
   /* === about-section === */
+
+  #about {
+    margin-top: -60%;
+  }
 
   .about-div {
     display: flex;
