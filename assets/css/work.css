@@ -150,6 +150,12 @@ a:hover {
   left:  45%;
 }
 
+.svg {
+  width: 90%;
+  height: 20%;
+  object-fit: contain;
+  padding: 10px;
+}
 .my-image {
   width: 60%;
   height: 20%;
@@ -378,46 +384,7 @@ a:hover {
   justify-content: center;
 }
 
-/* nav-tabs section  begins here*/
 
-.nav-tab-section {
-  margin-top: 70px;
-}
-
-.nav,.nav-tabs {
-  border: 0px !important;
-}
-
-.nav,.nav-tabs button {
-  padding: 30px 30px 25px 30px;
-  margin-left: 0px !important;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border: 2px solid #535252;
-}
-
-.nav, .nav-tabs i {
-  font-size: 24px;
-}
-
-.nav, .nav-item button:active {
-  color: #ff0000 !important;
-}
-
-.nav,.nav-tabs button:hover {
-  color: #fff;
-  background-color: #ff0000;
-}
-
-.tab-img {
-  width: 100%;
-  height: 50vh;
-}
-
-/* nav-tabs section ends here */
 
 /* service-section begins here */
 
@@ -564,19 +531,10 @@ a:hover {
 
 
 .testimonial-section{
+  position: relative;
   margin-top: 60px;
 }
 
-/* #testimonial-bg{
-  max-width: 100%;
-  padding-top: 20px;
-  height: 50vh;
-  background-attachment: fixed;
-  position: relative;
-  background-size: cover;
-  background-blend-mode: overlay !important;
-  
-} */
 
 #testimonial-bg:before {
   content: "";
@@ -596,7 +554,7 @@ a:hover {
 }
 
 .swiper .swiper-slide{
-  z-index: 10;
+  /* z-index: 10; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -639,6 +597,15 @@ a:hover {
   color: #fff;
   text-align: center !important;
   font-weight: 700;
+}
+
+.client-site{
+  color: #fff !important;
+}
+
+.client-site:hover {
+  color: #fff !important;
+  font-weight: 600;
 }
 
 .client-speech {
@@ -827,7 +794,7 @@ a:hover {
 
 
 /* --------------contact-section------------- */
-.contact-section {
+#contact-section {
   margin-top: 80px;
 }
 
@@ -985,11 +952,15 @@ a:hover {
 /*  ======== for small potrait devices====== */
 @media  (max-width: 575.98px)  {
 
-  .land-images img {
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
+  .land-images .svg {
+    display: none !important;
+    visibility: hidden !important;
   }
+
+  .my-image {
+    visibility: hidden !important;
+  }
+  
 
    /* .land-images {
     max-width: 100%;
@@ -1035,6 +1006,7 @@ a:hover {
     position: relative;
     font-size: larger;
     margin-top: 80px;
+    padding-top: 30px;
     margin-left: 10px;
     text-align: center;
     justify-content: center;
@@ -1067,7 +1039,6 @@ a:hover {
     margin-top: 10px !important;
     color: #fff;
     display: inline-block;
-    margin-top: 10px;
     margin-left: 10px;
     text-align: center !important;
     justify-content: center !important;
@@ -1087,7 +1058,7 @@ a:hover {
   /* === about-section === */
 
   #about {
-    margin-top: -60%;
+    margin-top: 40%;
   }
 
   .about-div {
@@ -1156,8 +1127,8 @@ h5,
   
 
   /* === testimonial section === */
-
-  #testimonial-bg{
+/* 
+  #testimonial-bg::before{
     max-width: 100%;
     margin-top: 20px;
     height: auto;
@@ -1166,6 +1137,45 @@ h5,
     position: relative;
     background-size: cover;
     background-blend-mode: overlay !important;
+  } */
+
+  .testimonial-section {
+    position: relative;
+  }
+
+  #testimonial-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(251, 50, 0, 0.3) url("../img/aerial-view-business-team.webp") no-repeat center;
+    max-width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay !important;
+    /* background-color: #ccc; */
+    filter: blur(2.5px);
+    z-index:0;
+  }
+  
+  .swiper .swiper-slide{
+    /* z-index: 10; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px 25px 30px;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #fff !important;
+  }
+  
+  
+  .swiper-pagination, .swiper-button-prev, .swiper-button-next {
+    color: #fff;
   }
 
   .client-img{
@@ -1284,6 +1294,23 @@ h5,
   }
 }
 
+/* query for small size screen too */
+/* @media (max-width:548px) {
+  .land-bg {
+    width: 100%;
+    height: 100% !important;
+    padding: 80px;
+  }
+
+  .land-images .svg {
+    overflow: hidden !important;
+    visibility: hidden !important;
+    display: none !important;
+  }
+
+  
+} */
+
 
 
 
@@ -1291,7 +1318,54 @@ h5,
 
 /* media query for large potrait (tablet) devices */
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+
+  .land-images {
+    width: 100%;
+    height: 50%;
+    /* position: absolute; */
+    bottom: 0;
+    right: 100px;
+  }
+  
+  .land-images img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    transition: bottom 1s, left 1s;
+  }
+  
+  .land-images:hover .svg {
+    bottom: 40px;
+  }
+  
+  .land-images:hover .my-image {
+    left:  45%;
+  }
+
+  .svg {
+    object-fit: cover;
+    width: 30em;
+    height: 50em;
+    display: none;
+    visibility: hidden;
+  }
+  
+  .my-image {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    margin-top: 100% !important;
+    width: 60%;
+    height: 20%;
+    object-fit: cover;
+    padding: 10px;
+  }
+
+
   .image-heading h1 {
     font-size: 25px;
     text-align: center;
@@ -1321,8 +1395,9 @@ h5,
   }
 
 
-  #testimonial-bg{
+  /* #testimonial-bg{
     max-width: 100%;
+    margin-top: 30%;
     padding-top: 20px;
     height: auto;
     background-attachment: fixed;
@@ -1330,7 +1405,47 @@ h5,
     background-size: cover;
     background-blend-mode: overlay !important;
     
+  } */
+
+  .testimonial-section {
+    position: relative;
   }
+
+  #testimonial-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(251, 50, 0, 0.3) url("../img/aerial-view-business-team.webp") no-repeat center;
+    max-width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay !important;
+    /* background-color: #ccc; */
+    filter: blur(2.5px);
+    z-index:0;
+  }
+  
+  .swiper .swiper-slide{
+    /* z-index: 10; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px 25px 30px;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #fff !important;
+  }
+  
+  
+  .swiper-pagination, .swiper-button-prev, .swiper-button-next {
+    color: #fff;
+  }
+  
 
   .testimonial-line {
     display: grid;
@@ -1371,6 +1486,15 @@ h5,
     content: "";
     height: 4px;
   }
+
+  .my-image {
+    margin-left: 20px;
+    margin-top: 50%;
+    width: 60%;
+    height: 20%;
+    object-fit: cover;
+    padding: 10px;
+  }
   
   .image-heading h1 {
     font-size: 25px;
@@ -1403,6 +1527,75 @@ h5,
   }
 
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .svg {
+    display: none;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+  #testimonial-bg:before {
+    position: absolute;
+  }
+
+  .swiper .swiper-slide{
+    /* z-index: 10; */
+    padding: 30px 20px 25px 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .svg {
+    display: block;
+    visibility: visible;
+    width: 50em;
+    height: 50em;
+  }
+
+  .my-image {
+    display: block;
+    visibility: visible;
+    position: static;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1130px) {
+  .svg {
+  width: 60%;
+  display: block;
+  visibility: visible;
+  padding: 10px;
+  }
+  
+  .my-image {
+  display: block;
+  visibility: visible;
+  position: static;
+  margin-top: 0;
+  width: 60%;
+  height: auto;
+  padding:10px;
+  }
+  }
+  
+
+  
+  
+  
+  
+  
+  
+  
+
 
 @media  (max-width: 840px) {
   .form {

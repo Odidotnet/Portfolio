@@ -1,8 +1,8 @@
 new Swiper('.swiper', {
-  speed: 400,
+  speed: 550,
   loop: true,
   autoplay: {
-    delay: 5000,
+    delay: 6500,
     disableOnInteraction: false
   },
   slidesPerView: 'auto',
@@ -15,10 +15,16 @@ new Swiper('.swiper', {
 
 // code my typedjs
 var typed = new Typed(".auto-type", {
-  strings: ["Hire me as Web Developer", "Get Better Digital Experience with ODIDOTNET"],
+  strings: ["Hire me as a Web Developer"],
   typeSpeed: 150,
   backSpeed: 150,
   loop: true
 })
 
 console.log('Hello World');
+
+if (typeof particlesJS !== 'undefined') {
+  particlesJS.load('particles-js', 'assets/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+}
